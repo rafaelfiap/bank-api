@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * Controlador responsável pelo gerenciamento das contas bancárias.
  * 
- * @author Seu Nome
+ * @author Rafael e Lucas
  * @since 1.0
  * @version 1.1
  * @see Conta
