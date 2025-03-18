@@ -8,16 +8,36 @@ import org.springframework.http.HttpStatus;
 import java.util.Map;
 import java.util.List;
 
+/**
+ * Controlador responsável pelo gerenciamento das contas bancárias.
+ * 
+ * @author Seu Nome
+ * @since 1.0
+ * @version 1.1
+ * @see Conta
+ * @see ContaService
+ */
 @RestController
 @RequestMapping("/contas")
 public class ContaController {
 
     private final ContaService contaService;
 
+    /**
+     * Construtor do controlador de contas.
+     * 
+     * @param contaService Serviço responsável pelo gerenciamento das contas.
+     */
     public ContaController(ContaService contaService) {
         this.contaService = contaService;
     }
 
+    /**
+     * Cadastra uma nova conta.
+     * 
+     * @param conta Dados da conta a ser cadastrada.
+     * @return Conta criada ou erro caso haja problema.
+     */
     @PostMapping
     public ResponseEntity<?> cadastrarConta(@RequestBody Conta conta) {
         try {
@@ -27,11 +47,22 @@ public class ContaController {
         }
     }
 
+    /**
+     * Lista todas as contas registradas.
+     * 
+     * @return Lista de contas.
+     */
     @GetMapping
     public ResponseEntity<List<Conta>> listarContas() {
         return ResponseEntity.ok(contaService.listarContas());
     }
 
+    /**
+     * Busca uma conta pelo ID.
+     * 
+     * @param id Identificador da conta.
+     * @return Conta encontrada ou erro caso não exista.
+     */
     @GetMapping("/{id}")
     public ResponseEntity<?> buscarPorId(@PathVariable Long id) {
         try {
@@ -41,6 +72,12 @@ public class ContaController {
         }
     }
 
+    /**
+     * Busca uma conta pelo CPF do titular.
+     * 
+     * @param cpf CPF do titular.
+     * @return Conta encontrada ou erro caso não exista.
+     */
     @GetMapping("/cpf/{cpf}")
     public ResponseEntity<?> buscarPorCpf(@PathVariable String cpf) {
         try {
@@ -50,6 +87,12 @@ public class ContaController {
         }
     }
 
+    /**
+     * Encerra uma conta.
+     * 
+     * @param requestBody Contém o ID da conta a ser encerrada.
+     * @return Conta encerrada ou erro caso não seja possível encerrar.
+     */
     @PutMapping("/encerrar")
     public ResponseEntity<?> encerrarConta(@RequestBody Map<String, Long> requestBody) {
         try {
@@ -60,6 +103,12 @@ public class ContaController {
         }
     }
 
+    /**
+     * Realiza um depósito em uma conta.
+     * 
+     * @param requestBody Contém o ID da conta e o valor do depósito.
+     * @return Conta atualizada ou erro caso não seja possível depositar.
+     */
     @PutMapping("/deposito")
     public ResponseEntity<?> depositar(@RequestBody Map<String, Object> requestBody) {
         try {
@@ -71,6 +120,12 @@ public class ContaController {
         }
     }
 
+    /**
+     * Realiza um saque de uma conta.
+     * 
+     * @param requestBody Contém o ID da conta e o valor do saque.
+     * @return Conta atualizada ou erro caso não seja possível sacar.
+     */
     @PutMapping("/saque")
     public ResponseEntity<?> sacar(@RequestBody Map<String, Object> requestBody) {
         try {
@@ -82,6 +137,12 @@ public class ContaController {
         }
     }
 
+    /**
+     * Realiza uma transferência PIX entre contas.
+     * 
+     * @param pixData Contém os IDs das contas de origem e destino e o valor do PIX.
+     * @return Conta de origem atualizada ou erro caso a transferência não seja possível.
+     */
     @PutMapping("/pix")
     public ResponseEntity<?> realizarPix(@RequestBody Map<String, Object> pixData) {
         try {
