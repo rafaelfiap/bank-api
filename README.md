@@ -94,7 +94,7 @@ A API ficará disponível em: `http://localhost:8080`
   }
 
 ```
----
+
 ### 🔹 **Listar Todas as Contas**
 `GET /contas`
 #### **Response**
@@ -110,6 +110,7 @@ A API ficará disponível em: `http://localhost:8080`
         "tipo": "CORRENTE"
     }
 ]
+
 ```
 
 ### 🔹 **Buscar Conta por ID**
