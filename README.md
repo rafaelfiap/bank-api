@@ -218,19 +218,6 @@ GET /contas/cpf/12345678901
 }
 ```
 
-### 🔹 **Deletar Conta**
-`DELETE /contas/{id}`
-#### **Exemplo:**
-```sh
-DELETE /contas/1
-```
-#### **Response:**
-```json
-{
-    "mensagem": "Conta deletada com sucesso!"
-}
-```
-
 ---
 ## 📌 **Como Contribuir?**
 1. **Faça um Fork** deste repositório.
