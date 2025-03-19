@@ -126,6 +126,7 @@ GET /contas/1
     "agencia": "001",
     "nomeTitular": "João da Silva",
     "cpfTitular": "12345678901",
+    "dataAbertura": "18-03-2025",
     "saldo": 1000.00,
     "ativa": true,
     "tipo": "CORRENTE"
@@ -146,6 +147,7 @@ GET /contas/cpf/12345678901
     "agencia": "001",
     "nomeTitular": "João da Silva",
     "cpfTitular": "12345678901",
+    "dataAbertura": "18-03-2025",
     "saldo": 1000.00,
     "ativa": true,
     "tipo": "CORRENTE"
