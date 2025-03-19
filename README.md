@@ -122,7 +122,10 @@ GET /contas/1
 ```json
 {
     "id": 1,
+    "numero": "10001",
+    "agencia": "001",
     "nomeTitular": "João da Silva",
+    "cpfTitular": "12345678901",
     "saldo": 1000.00,
     "ativa": true,
     "tipo": "CORRENTE"
