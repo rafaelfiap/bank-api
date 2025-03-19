@@ -99,15 +99,39 @@ A API ficará disponível em: `http://localhost:8080`
 #### **Response**
 ```json
 [
-    {
-        "id": 1,
-        "numero": "10001",
-        "agencia": "001",
-        "nomeTitular": "João da Silva",
-        "saldo": 1000.00,
-        "ativa": true,
-        "tipo": "CORRENTE"
-    }
+	{
+		"id": 1,
+		"numero": "10001",
+		"agencia": "001",
+		"nomeTitular": "João da Silva",
+		"cpfTitular": "12345678901",
+		"dataAbertura": "18-03-2025",
+		"saldo": 1000,
+		"ativa": true,
+		"tipo": "CORRENTE"
+	},
+	{
+		"id": 2,
+		"numero": "20002",
+		"agencia": "002",
+		"nomeTitular": "Maria Oliveira",
+		"cpfTitular": "98765432109",
+		"dataAbertura": "18-03-2025",
+		"saldo": 1500,
+		"ativa": true,
+		"tipo": "POUPANCA"
+	},
+	{
+		"id": 3,
+		"numero": "30003",
+		"agencia": "003",
+		"nomeTitular": "Carlos Souza",
+		"cpfTitular": "11223344556",
+		"dataAbertura": "18-03-2025",
+		"saldo": 2000,
+		"ativa": true,
+		"tipo": "SALARIO"
+	}
 ]
 
 ```
