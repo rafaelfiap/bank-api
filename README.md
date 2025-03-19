@@ -59,7 +59,7 @@ A API ficará disponível em: `http://localhost:8080`
     "tipo": "CORRENTE"
   }
   ```
-
+---
 ### Criar Conta 2 (Poupança)
 - **Método:** POST
 - **URL:** `http://localhost:8080/contas`
