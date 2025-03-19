@@ -43,36 +43,56 @@ mvnw.cmd spring-boot:run
 A API ficará disponível em: `http://localhost:8080`
 
 ---
-## 📌 **Endpoints da API**
+### Criar Conta 1 (Corrente)
+- **Método:** POST
+- **URL:** `http://localhost:8080/contas`
+- **Body:**
+  ```json
+  {
+    "numero": "10001",
+    "agencia": "001",
+    "nomeTitular": "João da Silva",
+    "cpfTitular": "12345678901",
+    "dataAbertura": "18-03-2025",
+    "saldo": 1000.00,
+    "ativa": true,
+    "tipo": "CORRENTE"
+  }
+  ```
 
-### 🔹 **Criar uma Conta**
-`POST /contas`
-#### **Request Body (JSON)**
-```json
-{
-    "numero": "10001",
-    "agencia": "001",
-    "nomeTitular": "João da Silva",
-    "cpfTitular": "12345678901",
+### Criar Conta 2 (Poupança)
+- **Método:** POST
+- **URL:** `http://localhost:8080/contas`
+- **Body:**
+  ```json
+  {
+    "numero": "20002",
+    "agencia": "002",
+    "nomeTitular": "Maria Oliveira",
+    "cpfTitular": "98765432109",
     "dataAbertura": "18-03-2025",
-    "saldo": 1000.00,
+    "saldo": 1500.00,
     "ativa": true,
-    "tipo": "CORRENTE"
-}
-```
-#### **Response**
-```json
-{
-    "id": 1,
-    "numero": "10001",
-    "agencia": "001",
-    "nomeTitular": "João da Silva",
-    "cpfTitular": "12345678901",
+    "tipo": "POUPANCA"
+  }
+  ```
+
+### Criar Conta 3 (Salário)
+- **Método:** POST
+- **URL:** `http://localhost:8080/contas`
+- **Body:**
+  ```json
+  {
+    "numero": "30003",
+    "agencia": "003",
+    "nomeTitular": "Carlos Souza",
+    "cpfTitular": "11223344556",
     "dataAbertura": "18-03-2025",
-    "saldo": 1000.00,
+    "saldo": 2000.00,
     "ativa": true,
-    "tipo": "CORRENTE"
-}
+    "tipo": "SALARIO"
+  }
+
 ```
 
 ### 🔹 **Listar Todas as Contas**
