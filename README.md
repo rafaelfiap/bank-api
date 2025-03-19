@@ -94,7 +94,7 @@ A API ficará disponível em: `http://localhost:8080`
   }
 
 ```
-
+---
 ### 🔹 **Listar Todas as Contas**
 `GET /contas`
 #### **Response**
