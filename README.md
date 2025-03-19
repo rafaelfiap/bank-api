@@ -129,6 +129,26 @@ GET /contas/1
 }
 ```
 
+### 🔹 **Buscar Conta por CPF**
+`GET /contas/cpf/{cpf}`
+#### **Exemplo:**
+```sh
+GET /contas/cpf/12345678901
+```
+#### **Response:**
+```json
+{
+    "id": 1,
+    "numero": "10001",
+    "agencia": "001",
+    "nomeTitular": "João da Silva",
+    "cpfTitular": "12345678901",
+    "saldo": 1000.00,
+    "ativa": true,
+    "tipo": "CORRENTE"
+}
+```
+
 ### 🔹 **Realizar Depósito**
 `PUT /contas/deposito`
 #### **Request Body (JSON)**
